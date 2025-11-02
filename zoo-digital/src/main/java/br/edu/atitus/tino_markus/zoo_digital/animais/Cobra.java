@@ -6,8 +6,8 @@ import br.edu.atitus.tino_markus.zoo_digital.comportamentos.Rastejante;
 
 public class Cobra extends Reptil implements Nadador, Rastejante, Predador{
 
-	public Cobra(String nome, String especie, int idade, String venenoso) {
-		super(nome, especie, idade, venenoso);
+	public Cobra(String nome, String especie, int idade) {
+		super(nome, especie, idade);
 	}
 
 	public void rasteja() {

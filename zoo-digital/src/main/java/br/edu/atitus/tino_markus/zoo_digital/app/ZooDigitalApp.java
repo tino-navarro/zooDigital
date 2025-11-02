@@ -1,5 +1,6 @@
 package br.edu.atitus.tino_markus.zoo_digital.app;
 import java.util.ArrayList;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -133,12 +134,6 @@ public class ZooDigitalApp {
 		    	corPenas = scan.nextLine();
 		    }
 		    
-		    String venenoso = "";
-		    if (tipo.equals("cobra") || tipo.equals("crocodilo") || tipo.equals("lagarto") || tipo.equals("tartaruga")) {
-		        System.out.print("Digite se o réptil é venenoso ou não (sim/não): ");
-		        venenoso = scan.nextLine();
-		    }
-		    
 		    Animal novoAnimal = null;
 		    
 		    switch (tipo) {
@@ -146,17 +141,17 @@ public class ZooDigitalApp {
 	            case "cachorro": novoAnimal = new Cachorro(nome, especie, idade); break;
 	            case "canario": novoAnimal = new Canario(nome, especie, idade, corPenas); break;
 	            case "carpa": novoAnimal = new Carpa(nome, especie, idade, tipoAgua); break;
-	            case "cobra": novoAnimal = new Cobra(nome, especie, idade, venenoso); break;
-	            case "crocodilo": novoAnimal = new Crocodilo(nome, especie, idade, venenoso); break;
+	            case "cobra": novoAnimal = new Cobra(nome, especie, idade); break;
+	            case "crocodilo": novoAnimal = new Crocodilo(nome, especie, idade); break;
 	            case "ema": novoAnimal = new Ema(nome, especie, idade, corPenas); break;
 	            case "golfinho": novoAnimal = new Golfinho(nome, especie, idade); break;
-	            case "lagarto": novoAnimal = new Lagarto(nome, especie, idade, venenoso); break;
+	            case "lagarto": novoAnimal = new Lagarto(nome, especie, idade); break;
 	            case "lambari": novoAnimal = new Lambari(nome, especie, idade, tipoAgua); break;
-	            case "macaco": novoAnimal = new Macaco(nome, idade); break;
+	            case "macaco": novoAnimal = new Macaco(nome, especie, idade); break;
 	            case "onça pintada": novoAnimal = new OncaPintada(nome, especie, idade); break;
 	            case "pato": novoAnimal = new Pato(nome, especie, idade, corPenas); break;
 	            case "pinguim": novoAnimal = new Pinguim(nome, especie, idade, corPenas); break;
-	            case "tartaruga": novoAnimal = new Tartaruga(nome, especie, idade, venenoso); break;
+	            case "tartaruga": novoAnimal = new Tartaruga(nome, especie, idade); break;
 	            case "traira": novoAnimal = new Traira(nome, especie, idade, tipoAgua); break;
 	            default:
 	                System.out.println("Tipo de animal desconhecido!");
@@ -186,9 +181,10 @@ public class ZooDigitalApp {
 		        
 		    private static void listarCorredores() {
 		    	System.out.println("\n=== Animais Corredores ===");
+		    	
 		            for (Animal animal : listaAnimais) {
 		                if (animal instanceof Corredor corredor) {
-		                    System.out.println(animal.getNome() + " - " + animal.getEspecie());
+		                    System.out.println("Nome: " + animal.getNome() + " - " + " Espécie: " + animal.getEspecie() + " - " + "Idade: " + animal.getIdade());
 		                    corredor.correr();
 		                }
 		         }            
@@ -196,29 +192,52 @@ public class ZooDigitalApp {
 		    
            private static void listarNadadores() {
         	   System.out.println("\n=== Animais Nadadores ===");
+        	   
+        	
+        	   
         	   		for (Animal animal : listaAnimais) {
         	   			if (animal instanceof Nadador nadador) {
-        	   				System.out.println(animal.getNome() + " - " + animal.getEspecie());
+        	   				System.out.println("Nome: " + animal.getNome() + " - " + " Espécie: " + animal.getEspecie() + " - " + "Idade: " + animal.getIdade());
+        	   				
+        	   			if (animal instanceof Peixe) {
+           	   	             
+            	   	        Peixe peixe = (Peixe) animal;
+            	   	        String dadosAnimal = " (Água onde vive: " + peixe.getTipoAgua() + ")";
+            	   	        System.out.println(dadosAnimal);
         	   				nadador.nadar();
         	   			}
+        	   		}
         	   	}   		
             }
            
            private static void listarVoadores() {
         	   System.out.println("\n=== Animais Voadores ===");
+        	   
+        	 
         	   		for (Animal animal : listaAnimais) {
         	   			if (animal instanceof Voador voador) {
-        	   				System.out.println(animal.getNome() + " - " + animal.getEspecie());
-        	   				voador.voar();
+        	   				System.out.println("Nome: " + animal.getNome() + " - " + " Espécie: " + animal.getEspecie() + " - " + "Idade: " + animal.getIdade());
+        	   				
+        	   			if (animal instanceof Ave) {
+        	   	             
+        	   	            Ave ave = (Ave) animal;
+        	   	            String dadosAnimal = " (Cor das penas: " + ave.getCorPenas() + ")";
+        	   	            System.out.println(dadosAnimal);
+        	   	           
+        	   	            voador.voar();
         	   			}
         	   		}
         	   	}
+        	}
            
            private static void listarPredadores() {
         	   System.out.println("\n=== Animais Predadores ===");
+        	   
+        	   
+        	   
         	   		for (Animal animal : listaAnimais) {
         	   			if (animal instanceof Predador predador ) {
-        	   				System.out.println(animal.getNome() + " - " + animal.getEspecie());
+        	   				System.out.println("Nome: " + animal.getNome() + " - " + " Espécie: " + animal.getEspecie() + " - " + "Idade: " + animal.getIdade());
         	   				predador.cacar();
         	   			}
         	   		}
@@ -226,16 +245,24 @@ public class ZooDigitalApp {
            
            private static void listarRastejantes() {
         	   System.out.println("\n=== Animais Rastejantes ===");
+        	   
+         
+		        
         	   		for (Animal animal : listaAnimais) {
         	   			if (animal instanceof Rastejante rastejante) {
-        	   				System.out.println(animal.getNome() + " - " + animal.getEspecie());
+        	   				System.out.println("Nome: " + animal.getNome() + " - " + " Espécie: " + animal.getEspecie() + " - " + "Idade: " + animal.getIdade());
         	   				rastejante.rasteja();
         	   			}
         	   		}
         	   	}
 
            private static void totalAnimais() {
+        	   
         	   System.out.println("=== Total de animais cadastrados ===");
+        	   if (listaAnimais.isEmpty()) {
+        		   System.out.println("Nenhum animal cadastrado ainda.");
+        		   return; 
+        	   }
         	   System.out.println("Animais cadastrados: " + Animal.getContador());
            }
 	}

@@ -6,8 +6,8 @@ import br.edu.atitus.tino_markus.zoo_digital.comportamentos.Predador;
 
 public class Lagarto extends Reptil implements Corredor, Nadador, Predador {
 
-	public Lagarto(String nome, String especie, int idade, String venenoso) {
-		super(nome, especie, idade, venenoso);
+	public Lagarto(String nome, String especie, int idade) {
+		super(nome, especie, idade);
 	}
 	
 	public void correr() { 

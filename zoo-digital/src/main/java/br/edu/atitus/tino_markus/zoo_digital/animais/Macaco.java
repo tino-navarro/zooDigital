@@ -7,8 +7,8 @@ import br.edu.atitus.tino_markus.zoo_digital.comportamentos.Predador;
 public class Macaco extends Mamifero implements Nadador, Corredor, Predador{
 	
 
-	public Macaco(String nome, int idade) {
-		super(nome, "Mico-Leão-Dourado", idade, true);
+	public Macaco(String nome, String especie, int idade) {
+		super(nome, especie, idade, true);
 	      
 	}
 

@@ -7,8 +7,8 @@ import br.edu.atitus.tino_markus.zoo_digital.comportamentos.Rastejante;
 
 public class Crocodilo extends Reptil implements Corredor, Nadador, Predador, Rastejante {
 
-	public Crocodilo(String nome, String especie, int idade, String venenoso) {
-		super(nome, especie, idade, venenoso);
+	public Crocodilo(String nome, String especie, int idade) {
+		super(nome, especie, idade);
 	}
 	
 	public void correr() { 

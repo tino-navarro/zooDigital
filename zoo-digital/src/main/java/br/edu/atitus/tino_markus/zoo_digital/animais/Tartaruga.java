@@ -6,8 +6,8 @@ import br.edu.atitus.tino_markus.zoo_digital.comportamentos.Predador;
 import br.edu.atitus.tino_markus.zoo_digital.comportamentos.Rastejante;
 
 public class Tartaruga extends Reptil implements Corredor, Nadador, Predador, Rastejante{
-	public Tartaruga(String nome, String especie, int idade, String venenoso) {
-		super(nome, especie, idade, venenoso);
+	public Tartaruga(String nome, String especie, int idade) {
+		super(nome, especie, idade);
 	}
 	@Override
 	public void correr() { 
