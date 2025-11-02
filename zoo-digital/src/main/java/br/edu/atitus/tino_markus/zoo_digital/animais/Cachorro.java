@@ -31,6 +31,7 @@ public class Cachorro extends Mamifero implements Nadador, Corredor, Predador{
         System.out.println(getNome() + " está nadando");
     }
     
+    @Override
     public void cacar() {
     	System.out.println(getNome() + " está caçando a meia que roubou");
     }

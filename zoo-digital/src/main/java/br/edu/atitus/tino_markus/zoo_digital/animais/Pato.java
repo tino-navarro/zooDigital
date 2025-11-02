@@ -36,7 +36,7 @@ public class Pato extends Ave implements Voador, Nadador, Corredor, Predador{
         System.out.println(getNome() + " está voando pelos ares");
     }
     
-   
+    @Override
     public void cacar() {
         System.out.println(getNome() + " está prendando pequenos peixes");
     }

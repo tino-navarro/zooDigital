@@ -5,7 +5,7 @@ import br.edu.atitus.tino_markus.zoo_digital.comportamentos.Predador;
 
 public class Carpa extends Peixe implements Nadador, Predador{
 	public Carpa(String nome, String especie, int idade, String tipoAgua) {
-        super(nome, especie, idade, "Doce");
+        super(nome, especie, idade, tipoAgua);
         
     }
 

@@ -35,6 +35,7 @@ public class Crocodilo extends Reptil implements Corredor, Nadador, Predador, Ra
     }
     
     
+    @Override
     public void cacar() {
         System.out.println(getNome() + " está caçando animais");
     }

@@ -30,7 +30,7 @@ public class Ema extends Ave implements Corredor, Nadador, Predador{
         System.out.println(getNome() + " está nadando no rio");
     }
 
-   
+    @Override
     public void cacar() {
         System.out.println(getNome() + " está prendando pequenos animais");
     }

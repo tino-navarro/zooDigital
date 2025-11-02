@@ -32,6 +32,7 @@ public class Macaco extends Mamifero implements Nadador, Corredor, Predador{
 		System.out.println(getNome() + " está nadando no rio");
 	}
 	    
+	@Override
 	public void cacar() {
 		System.out.println(getNome() + " está caçando pequenos invertebrados");
 	}

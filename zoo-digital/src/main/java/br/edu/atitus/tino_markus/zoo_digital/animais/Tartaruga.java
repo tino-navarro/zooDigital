@@ -9,11 +9,11 @@ public class Tartaruga extends Reptil implements Corredor, Nadador, Predador, Ra
 	public Tartaruga(String nome, String especie, int idade, String venenoso) {
 		super(nome, especie, idade, venenoso);
 	}
-	
+	@Override
 	public void correr() { 
 		System.out.println(getNome() + " está correndo");
 	}
-	
+	@Override
 	public void rasteja() {
         System.out.println(getNome() + " está rastejando pelo mato");
     }
@@ -33,7 +33,7 @@ public class Tartaruga extends Reptil implements Corredor, Nadador, Predador, Ra
         System.out.println(getNome() + " está nadando no rio");
     }
     
-    
+    @Override
     public void cacar() {
         System.out.println(getNome() + " está caçando larvas e insetos");
     }

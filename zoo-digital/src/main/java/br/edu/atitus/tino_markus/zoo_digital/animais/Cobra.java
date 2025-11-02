@@ -29,7 +29,7 @@ public class Cobra extends Reptil implements Nadador, Rastejante, Predador{
         System.out.println(getNome() + " está nadando no rio");
     }
     
-    
+    @Override
     public void cacar() {
         System.out.println(getNome() + " está caçando pequenos roedores");
     }
