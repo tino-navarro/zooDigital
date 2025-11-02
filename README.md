@@ -40,24 +40,6 @@ Rastejantes (Rastejante)
 
 Exibir Total de Animais: Mostra a contagem total de animais cadastrados, utilizando um contador estático na classe Animal.
 
-📂 Estrutura do Projeto
-O código-fonte está organizado em pacotes para garantir a separação de responsabilidades:
-
-src/main/java
-└── br/edu/atitus/tino_markus/zoo_digital
-    ├── app
-    │   └── ZooDigitalApp.java     # Classe principal com o menu CLI
-    ├── animais
-    │   ├── Animal.java            # Classe abstrata base
-    │   ├── Ave.java               # Subclasse abstrata
-    │   ├── Mamifero.java          # Subclasse abstrata
-    │   ├── Peixe.java             # Subclasse abstrata
-    │   ├── Reptil.java            # Subclasse abstrata
-    │   └── ...                    # Classes concretas (Cachorro, Pato, etc.)
-    └── comportamentos
-        ├── Corredor.java          # Interface de comportamento
-        ├── Nadador.java           # Interface de comportamento
-        └── ...                    # Outras interfaces
 🚀 Como Executar
 Pré-requisitos
 Java Development Kit (JDK) 21 ou superior.
@@ -84,5 +66,3 @@ java -jar target/zoo-digital-1138028.jar
 (Nota: O nome do arquivo .jar pode variar com base na versão definida no pom.xml)
 
 Após a execução, o menu interativo do Zoo Digital será exibido no seu terminal.
-
-Este README foi gerado com base na análise do código-fonte do projeto.
