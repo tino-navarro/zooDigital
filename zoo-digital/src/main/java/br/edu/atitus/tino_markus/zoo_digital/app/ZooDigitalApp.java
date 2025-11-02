@@ -171,8 +171,15 @@ public class ZooDigitalApp {
 		    
 		    private static void listarTodos() {
 		        System.out.println("\n=== Lista de Todos os Animais ===");
+		        
+		        if (listaAnimais.isEmpty()) {
+		            System.out.println("Nenhum animal cadastrado ainda.");
+		            return; 
+		        }
 		        for (Animal animal : listaAnimais) {
-		            System.out.println(animal.getId() + " " + animal.getNome() + ", (" + animal.getEspecie() + "), " + animal.getIdade() + " anos");
+		            System.out.println(animal.getId() + " " + animal.getNome() + ", (" + animal.getEspecie() + "), " + animal.getIdade() + " anos + ");
+		            animal.emitirSom();
+		            animal.comer();
 		            
 		        }
 		    }
@@ -229,7 +236,7 @@ public class ZooDigitalApp {
 
            private static void totalAnimais() {
         	   System.out.println("=== Total de animais cadastrados ===");
-        	   System.out.println("Animais cadastrados: " + listaAnimais.size());
+        	   System.out.println("Animais cadastrados: " + Animal.getContador());
            }
 	}
         	   
