@@ -84,3 +84,5 @@ java -jar target/zoo-digital-1138028.jar
 (Nota: O nome do arquivo .jar pode variar com base na versão definida no pom.xml)
 
 Após a execução, o menu interativo do Zoo Digital será exibido no seu terminal.
+
+Este README foi gerado com base na análise do código-fonte do projeto.
